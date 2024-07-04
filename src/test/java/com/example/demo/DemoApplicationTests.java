@@ -20,6 +20,6 @@ class DemoApplicationTests {
 	@Test
 	void homeResponse() {
 		String body = this.restTemplate.getForObject("/", String.class);
-		assertEquals("Spring is here! Java Japp1", body);
+		assertEquals("Spring is here! Java Japp1 v1.0", body);
 	}
 }

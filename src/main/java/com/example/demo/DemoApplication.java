@@ -12,7 +12,7 @@ public class DemoApplication {
 //test
 	@GetMapping("/")
 	public String home() {
-		return "Spring is here! Java Japp1";
+		return "Spring is here! Java Japp1 v1.0";
 	}
 
 	public static void main(String[] args) {
