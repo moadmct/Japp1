@@ -115,6 +115,7 @@ pipeline {
             steps {
                withKubeConfig(caCertificate: '', clusterName: 'kubernetes', contextName: '', credentialsId: 'k8-cred', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://10.23.23.73:6443') {
                         //sh "kubectl delete deployment japp1-deployment -n webapps"
+                        sh "kubectl rollout restart deployment/japp1-deployment -n webapps"
                         sh "kubectl get pods -n webapps"
                         sh "kubectl get svc -n webapps"
                 }
